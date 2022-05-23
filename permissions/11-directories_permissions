@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ugo+x /shell/permissions
+chmod ugoa+x /shell/permissions
