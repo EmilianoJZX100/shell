@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -empty -printf "%P\n" | ls -1a
+find . -type f1 -empty -printf "%P\n" | ls -1
