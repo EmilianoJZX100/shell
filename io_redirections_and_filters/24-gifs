@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -type f -name "*.gif" printf '%s\n' "${f%.gif}" | sort -f--ignore-case | -printf "%f\n" 
+find . -maxdepth 1 -type f -name "*.gif" printf '%s\n' "${f%.gif}" sort -f--ignore-case -printf "%f\n" 
