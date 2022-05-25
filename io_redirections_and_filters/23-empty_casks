@@ -1,2 +1,2 @@
 #!/bin/bash
-find . | ls -da | echo
+find . | rev | cat | rev
