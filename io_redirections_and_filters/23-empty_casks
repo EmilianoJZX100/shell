@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty -type f | -printf "%P\n" "%f"
+find . -empty -type f | ls * | -printf "%P\n" "%f"
