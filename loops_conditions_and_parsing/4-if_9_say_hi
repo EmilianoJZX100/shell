@@ -2,7 +2,7 @@
 #Display Best School 10 times using while and "if" statement.
 
 counter=0
-while [ $counter -lt 10 ]
+while [ $counter -lt 11 ]
 do
     if [ $counter = 9 ]
     then
