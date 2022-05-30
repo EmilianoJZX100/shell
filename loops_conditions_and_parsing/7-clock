@@ -11,7 +11,7 @@ minutes=1
         while [ $minutes -lt 60 ]
         do
 echo "$minutes"
-(( minutes++ ))
+( minutes++ )
         done
-(( HOURS++ ))
+( HOURS++ )
         done
