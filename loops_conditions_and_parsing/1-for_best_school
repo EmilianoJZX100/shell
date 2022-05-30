@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-for Best School
-do echo "Best School"
+# Repeat Best School 10 times
+for (( a=1; a<=10; a++ ))
+do
+echo "Best School"
 done
