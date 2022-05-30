@@ -4,15 +4,18 @@
 		#displays good luck for the 8th loop iteration
 	    	#displays Best School for the other iterations
 counter=1
-	if [[ $counter -lt 11 ]] ; 
-	            then
-	echo "Best School"
-	
-	elif [[ $counter == 4 ]] ; 
-	            then
-	echo "bad luck"
-	
-	else [[ $counter == 8 ]] ;
-	echo "good luck"
-		((counter++))
-		    fi
+while [ $counter -lt 11 ]
+	do
+if [ $counter == 4 ]
+	then
+echo "bad luck"
+
+elif [ $counter == 8 ]
+	then
+echo "good luck"
+
+else
+echo "Best School"
+	fi
+	(( counter++ ))
+	done
