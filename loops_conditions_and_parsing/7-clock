@@ -6,12 +6,12 @@
 HOURS=0
         while [ $HOURS -lt 13 ]
         do
-echo hour: "$HOURS"
+echo "hour:$HOURS"
 minutes=1
         while [ $minutes -lt 60 ]
         do
 echo "$minutes"
-( minutes++ )
+	(( minutes++ ))
         done
-( HOURS++ )
+	(( HOURS++ ))
         done
