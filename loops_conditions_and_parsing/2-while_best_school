@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-#Write a Bash script that displays Best School until 10 times
-counter=10
-until [ $counter -gt 10 ]
+#Write a Bash script that displays Best School while up 1 by 1 10 times
+a=1
+while [ $a -le 10 ]
 do
-echo Best School
-((counter++))
+	echo "Best School"
+	a=$(( $a + 1 ))
 done
