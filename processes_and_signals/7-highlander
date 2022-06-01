@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #Highlander
-trap SIGTERM
-"echo I am invincible!!!"
+trap "echo I am invincible!!!" SIGTERM
 kill -15 
 while :
 do
