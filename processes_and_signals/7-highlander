@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Highlander
+trap SIGTERM
+"echo I am invincible!!!"
+kill -15 
+while :
+do
+       	echo "To infinity and beyond"
+        sleep 2
+	done
