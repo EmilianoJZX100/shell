@@ -2,15 +2,14 @@
 #create f
 pid=$/var/run/myscript.pid
 
-touch $pid
 echo $$ > $pid
 
 while true
 	        
 do
-	        echo "To infinity and beyond"
-		        sleep 2
-		done
-		        trap echo "Y U no love me?!" $pid SIGINT
-			        trap echo "I hate the kill command" $pid SIGTERM
-				        trap rm $pid SIGQUIT
+	echo "To infinity and beyond"
+	sleep 2
+done
+	trap echo "Y U no love me?!" $pid SIGINT
+	trap echo "I hate the kill command" $pid SIGTERM
+	trap rm $pid SIGQUIT
