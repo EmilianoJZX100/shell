@@ -8,7 +8,7 @@
 
 pid=/var/run/myscript.pid
 
-"echo $$ > $pid"
+echo $$ > $pid
 
 while true
 do
