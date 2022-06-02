@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #create f
-pid=$/var/run/myscript.pid
+pid=/var/run/myscript.pid
 
-echo $$ >> $pid
+echo $$ > $pid
 
 while true
 	        
