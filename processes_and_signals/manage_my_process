@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#
+pid=/tmp/my_process
+
+"echo $$ > $pid"
+
+while :
+	        do
+			        echo "I am alive!"
+				        sleep 2
+				done
