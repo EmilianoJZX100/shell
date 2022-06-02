@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#create file
+pid=$/var/run/myscript.pid
+
+
+while :
+        echo $$ > $pid
+do
+        echo "To infinity and beyond"
+        sleep 2
+if
+        trap $pid SIGQUIT
+then
+        echo "Y U no love me?!"
+fi
+if
+        trap $pid SIGTERM
+then
+        echo "I hate the kill command"
+fi
+done
