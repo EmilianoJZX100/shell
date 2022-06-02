@@ -10,7 +10,7 @@ while true
 do
 	        echo "To infinity and beyond"
 		        sleep 2
-			        trap echo "Y U no love me?!" $pid SIGINT
-				        trap echo "I hate the kill command" $pid SIGTERM
-					        trap $pid SIGQUIT
-					done
+		done
+		        trap echo "Y U no love me?!" $pid SIGINT
+			        trap echo "I hate the kill command" $pid SIGTERM
+				        trap rm $pid SIGQUIT
