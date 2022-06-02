@@ -12,10 +12,9 @@ echo $$ > $pid
 
 while true
 do
-	        echo "To infinity and beyond"
-		        sleep 2
-
-			        trap 'echo "Y U no love me?!"' SIGINT
-				        trap 'echo "I hate the kill command" ; rm $pid ; exit' SIGTERM 
-					        trap 'rm $pid; exit' SIGQUIT
-					done
+	echo "To infinity and beyond"
+	sleep 2
+        trap 'echo "Y U no love me?!"' SIGINT
+        trap 'echo "I hate the kill command" ; rm $pid ; exit' SIGTERM 
+        trap 'rm $pid; exit' SIGQUIT
+done
