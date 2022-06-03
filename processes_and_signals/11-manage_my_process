@@ -4,26 +4,25 @@
 pid=/var/run/my_process.pid
 aaa=manage_my_process
 
-/etc/init.d/$aaa & $pid start
-
-case $aaa in
+case $1 in
 	
         start)
-		       		        echo "$!" > $pid
+		        ./$aaa &
+			        echo $! > $pid
 				        echo "manage_my_process started"
 					        ;;
 						        
         stop)
-		        /etc/init.d/$aaa stop
-			        rm $pid
+		        kill -9 ./$aaa
+			        rm -f $pid
 				        echo "manage_my_process stopped"
 					        ;;
 						        
         restart)
-		        /etc/init.d/$aaa stop
-			        rm $pid
-				        /etc/init.d/$aaa start
-					        echo $$ > $pid
+		        kill -9 $aaa
+			        rm -f $pid
+				        ./$aaa &
+					        echo $! > $pid
 						        echo "manage_my_process restarted"
 							        ;;
 								
