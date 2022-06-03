@@ -9,8 +9,7 @@ aaa=manage_my_process
 case $aaa in
 	
         start)
-		        /etc/init.d/$aaa start
-			        echo "$!" > $pid
+		       		        echo "$!" > $pid
 				        echo "manage_my_process started"
 					        ;;
 						        
