@@ -5,29 +5,30 @@ pid=/var/run/my_process.pid
 aaa=manage_my_process
 
 /etc/init.d/$aaa & $pid start
-echo $$ > $pid
-while :
-do
-	        echo "manage_my_process started"
-	done
+
+case $aaa in
 	
-/etc/init.d/$aaa stop
-rm $pid
-while :
-do
-	        echo "manage_my_process stopped"
-	done
-	
-/etc/init.d/$aaa stop
-rm $pid
-/etc/init.d/$aaa start
-echo $$ > $pid
-while :
-do
-	        echo "manage_my_process restarted"
-	done
-	
-while :
-do
-	        echo "Usage: manage_my_process {start|stop|restart}"
-	done
+        start)
+		        /etc/init.d/$aaa start
+			        echo "$!" > $pid
+				        echo "manage_my_process started"
+					        ;;
+						        
+        stop)
+		        /etc/init.d/$aaa stop
+			        rm $pid
+				        echo "manage_my_process stopped"
+					        ;;
+						        
+        restart)
+		        /etc/init.d/$aaa stop
+			        rm $pid
+				        /etc/init.d/$aaa start
+					        echo $$ > $pid
+						        echo "manage_my_process restarted"
+							        ;;
+								
+        *)
+		        echo "Usage: manage_my_process {start|stop|restart}"
+			        ;;
+		esac
