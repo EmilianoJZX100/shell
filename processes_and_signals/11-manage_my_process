@@ -4,7 +4,7 @@
 pid=/var/run/my_process.pid
 aaa=manage_my_process
 
-/etc/init.d/$aaa start
+/etc/init.d/$aaa & $pid start
 echo $$ > $pid
 while :
 do
